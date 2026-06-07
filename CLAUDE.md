@@ -37,8 +37,9 @@
 ```powershell
 # 셋업 (venv 없음 — 최초 1회). GPU: RTX 4060 8GB 기준
 python -m venv venv
-venv\Scripts\pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+venv\Scripts\pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
 venv\Scripts\pip install -r requirements.txt   # transformers 5.9.0 등
+# torchvision 필수 — Qwen3-VL 프로세서가 의존(없으면 모델 로드 실패)
 
 # 추론 평가 (GPU)
 venv\Scripts\python.exe run_benchmark.py --media image,video

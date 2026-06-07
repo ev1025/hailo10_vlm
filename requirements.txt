@@ -1,5 +1,6 @@
 ﻿transformers==5.9.0
 torch==2.5.1
+torchvision==0.20.1
 accelerate
 qwen-vl-utils
 opencv-python
