@@ -8,8 +8,8 @@ VLM 프롬프트·생성 파라미터 검증 실험 모음 — 한 번의 모델
   korean  한자 차단(FORCE_KOREAN) on/off 인과 검증                            → FORCE_KOREAN_TEST.md
 
 사용:
-  venv\\Scripts\\python.exe -u vlm\\tools\\experiments.py term [--limit N]
-  venv\\Scripts\\python.exe -u vlm\\tools\\experiments.py all              # 4개 전부(모델 1회 로드 공유)
+  venv\\Scripts\\python.exe -u tools\\experiments.py term [--limit N]
+  venv\\Scripts\\python.exe -u tools\\experiments.py all              # 4개 전부(모델 1회 로드 공유)
 """
 from __future__ import annotations
 

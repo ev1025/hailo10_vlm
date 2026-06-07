@@ -3,7 +3,7 @@
 파서/상세도/리포트 레이아웃을 바꾼 뒤 모델 재실행 없이 md 만 다시 뽑을 때 사용.
 평가된 미디어별(이미지/영상)로 vlm_benchmark_<media>_<ts>.md 를 분리 생성한다.
 
-사용: venv\\Scripts\\python.exe vlm\\tools\\rebuild_report.py [json경로]  (생략 시 모든 json 재생성)
+사용: venv\\Scripts\\python.exe tools\\rebuild_report.py [json경로]  (생략 시 모든 json 재생성)
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # vlm/ 를 import 경로에
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  #  를 import 경로에
 
 import config as C          # noqa: E402
 import run_benchmark as R   # noqa: E402

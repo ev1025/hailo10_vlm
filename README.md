@@ -10,10 +10,10 @@
 
 | 무엇 | 내용 | 위치 |
 |---|---|---|
-| **메인 기록** | 모델 선정 ~ 최종 결과까지 전 과정·근거 | `vlm/프롬프트_튜닝_기록.md` |
-| **최종 평가 리포트** | 채택 설정 기준 이미지·영상 평가 (캡처별 해석 + 임베드 PDF) | `vlm/results/pixel_frame_test/` |
-| **실험 검증 자료** | 파라미터 스윕 · 전도/연기/반복/한자 A/B | `vlm/results/pixel_frame_test/` |
-| **프롬프트 비교** | P1~P5 변형별 리포트 | `vlm/results/prompt_test/` |
+| **메인 기록** | 모델 선정 ~ 최종 결과까지 전 과정·근거 | `프롬프트_튜닝_기록.md` |
+| **최종 평가 리포트** | 채택 설정 기준 이미지·영상 평가 (캡처별 해석 + 임베드 PDF) | `results/pixel_frame_test/` |
+| **실험 검증 자료** | 파라미터 스윕 · 전도/연기/반복/한자 A/B | `results/pixel_frame_test/` |
+| **프롬프트 비교** | P1~P5 변형별 리포트 | `results/prompt_test/` |
 
 > 처음이라면 **메인 기록**부터 읽으면 전체 그림이 잡힙니다.
 
@@ -105,10 +105,10 @@
 
 ```powershell
 # 추론 평가 (GPU) — 모델: Qwen3-VL-2B (fp16, RTX 4060 8GB)
-venv\Scripts\python.exe vlm\run_benchmark.py --media image,video
+venv\Scripts\python.exe run_benchmark.py --media image,video
 
 # 결과 md → 이미지 임베드 PDF
-venv\Scripts\python.exe vlm\tools\report_to_pdf.py
+venv\Scripts\python.exe tools\report_to_pdf.py
 ```
 
 ### 코드 구조

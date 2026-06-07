@@ -9,11 +9,11 @@ run_benchmark.py 를 조합별로 subprocess 실행(매 실행 새 프로세스 
   → 영상축 조합은 --media video 로, 이미지축 조합은 --media image 로만 돌려 시간 절약.
 
 사용:
-  venv\\Scripts\\python.exe vlm\\tools\\param_sweep.py --dry-run        # 실행 명령만 출력(검증)
-  venv\\Scripts\\python.exe vlm\\tools\\param_sweep.py                  # 전체 스윕 실행
-  venv\\Scripts\\python.exe vlm\\tools\\param_sweep.py --only f16,i1600 # 일부만
-  venv\\Scripts\\python.exe vlm\\tools\\param_sweep.py --limit 6        # 미디어별 6개로 빠른 점검
-  venv\\Scripts\\python.exe vlm\\tools\\param_sweep.py --summary-only   # 추론 없이 기존 결과 요약표만
+  venv\\Scripts\\python.exe tools\\param_sweep.py --dry-run        # 실행 명령만 출력(검증)
+  venv\\Scripts\\python.exe tools\\param_sweep.py                  # 전체 스윕 실행
+  venv\\Scripts\\python.exe tools\\param_sweep.py --only f16,i1600 # 일부만
+  venv\\Scripts\\python.exe tools\\param_sweep.py --limit 6        # 미디어별 6개로 빠른 점검
+  venv\\Scripts\\python.exe tools\\param_sweep.py --summary-only   # 추론 없이 기존 결과 요약표만
 실행 후: report_to_pdf.py 로 pixel_frame_test/ 의 md → pdf 변환(재귀 탐색).
 """
 
@@ -167,7 +167,7 @@ def main():
     sp.write_text(summary, encoding="utf-8")
     print("\n" + summary)
     print(f"\n요약 저장 → {sp}")
-    print(r"PDF: venv\Scripts\python.exe vlm\tools\report_to_pdf.py")
+    print(r"PDF: venv\Scripts\python.exe tools\report_to_pdf.py")
 
 
 if __name__ == "__main__":

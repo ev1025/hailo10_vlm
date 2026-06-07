@@ -3,7 +3,7 @@
 판정/유형 정답률 표를 만든다. 집계(SWEEP_SUMMARY)만으로 안 보이는 카테고리별 영향
 (특히 영상의 낙상/전도가 프레임 수에 따라 어떻게 변하는지)을 드러낸다.
 
-사용: venv\\Scripts\\python.exe vlm\\tools\\analyze_sweep.py   (결과를 stdout + pixel_frame_test/SWEEP_DETAIL.md)
+사용: venv\\Scripts\\python.exe tools\\analyze_sweep.py   (결과를 stdout + pixel_frame_test/SWEEP_DETAIL.md)
 """
 from __future__ import annotations
 

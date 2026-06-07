@@ -3,7 +3,7 @@
   md → HTML(이미지 base64 인라인 + <details> 펼침) → MS Edge/Chrome 헤드리스 print-to-pdf.
 별도 PDF 라이브러리 설치 없이 Windows 기본 Edge 로 변환(이미지·한글 폰트 그대로 렌더).
 
-사용: venv\\Scripts\\python.exe vlm\\tools\\report_to_pdf.py [md경로]
+사용: venv\\Scripts\\python.exe tools\\report_to_pdf.py [md경로]
       (생략 시 results/ 의 최신 vlm_benchmark_*.md)
 """
 

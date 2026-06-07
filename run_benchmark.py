@@ -5,7 +5,7 @@
 1차 지표: 해석 상세도(0~5)·출력 길이. 2차: 위험유형(화재/낙상/전도) 인식 정확도·과잉해석(오탐)·지연(엣지 운용).
 한 번에 모델 1개만 GPU 상주(fp16) — 모델 교체 시 이전 모델 해제.
 
-사용: venv\\Scripts\\python.exe vlm\\run_benchmark.py [--models qwen3,qwen2] [--limit N] [--media image,video]
+사용: venv\\Scripts\\python.exe run_benchmark.py [--models qwen3,qwen2] [--limit N] [--media image,video]
 전제: dataset/ 에 이미지·영상 준비 완료 (dataset/images/ · dataset/videos/).
 """
 
@@ -629,7 +629,7 @@ def main():
     print(f"완료: {len(records)}건 / {time.time()-overall:.1f}초")
     for media, rp in written:
         print(f"[{media}] 리포트 → {rp}")
-    print(r"PDF 생성: venv\Scripts\python.exe vlm\tools\report_to_pdf.py")
+    print(r"PDF 생성: venv\Scripts\python.exe tools\report_to_pdf.py")
     print(f"{'='*60}")
 
 

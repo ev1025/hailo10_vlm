@@ -1,9 +1,9 @@
 """
 VLM 벤치마크 공통 설정 — 모델/카테고리/경로/프롬프트/프레임 파라미터.
 
-이 폴더(vlm/)의 스크립트는 패키지가 아니라 평범한 스크립트로 실행한다.
-  venv\\Scripts\\python.exe vlm\\run_benchmark.py     # 추론 + md 리포트
-실행 시 스크립트 폴더(vlm/)가 sys.path[0] 이 되어 `import config` 가 동작한다.
+이 폴더의 스크립트는 패키지가 아니라 평범한 스크립트로 실행한다.
+  venv\\Scripts\\python.exe run_benchmark.py     # 추론 + md 리포트
+실행 시 스크립트 폴더가 sys.path[0] 이 되어 `import config` 가 동작한다.
 """
 
 from __future__ import annotations
