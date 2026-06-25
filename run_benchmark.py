@@ -6,7 +6,7 @@
 한 번에 모델 1개만 GPU 상주(fp16) — 모델 교체 시 이전 모델 해제.
 
 사용: venv\\Scripts\\python.exe run_benchmark.py [--models qwen3,qwen2] [--limit N] [--media image,video]
-전제: dataset/ 에 이미지·영상 준비 완료 (dataset/images/ · dataset/videos/).
+전제: 통합 DATA 에 이미지·영상 준비 완료 (config.IMAGE_DIR · VIDEO_DIR → LLM/DATA).
 """
 
 from __future__ import annotations
@@ -497,7 +497,7 @@ def main():
     media_filter = {m.strip() for m in args.media.split(",") if m.strip()}
     items = build_dataset(media_filter, args.limit or None)
     if not items:
-        print(f"[중단] 데이터셋이 비어있습니다. dataset/images · dataset/videos 에 파일을 넣으세요 → {C.DATASET_DIR}")
+        print(f"[중단] 데이터셋이 비어있습니다. 파일을 넣으세요 → {C.IMAGE_DIR} · {C.VIDEO_DIR}")
         sys.exit(1)
 
     models = C.VLM_MODELS

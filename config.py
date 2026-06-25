@@ -12,8 +12,10 @@ from pathlib import Path
 
 VLM_DIR = Path(__file__).resolve().parent
 DATASET_DIR = VLM_DIR / "dataset"
-VIDEO_DIR = DATASET_DIR / "videos"
-IMAGE_DIR = DATASET_DIR / "images"
+# 영상·이미지는 통합 데이터 폴더(LLM/DATA)로 이전됨. 썸네일(파생물)만 레포에 남음.
+DATA_DIR = VLM_DIR.parent / "DATA"
+VIDEO_DIR = DATA_DIR / "videos" / "incident"
+IMAGE_DIR = DATA_DIR / "images" / "industrial"
 VIDEO_THUMB_DIR = DATASET_DIR / "video_thumbs"   # 영상 대표(중간) 프레임 — 리포트 카드용
 RESULTS_DIR = VLM_DIR / "results"
 
@@ -29,7 +31,7 @@ VLM_MODELS = [
 #   + 오탐 통제용 정상 2종(주차장·작업장).
 #   count: 수집 영상 수 · label: 정답(위험/정상) · danger: 위험유형(화재/낙상/전도/없음) · query: 유튜브 검색어
 #   합계 영상 30개 → 각 영상의 중간 프레임 1장씩 = 이미지 30개. 모델당 60개, 2모델 120건.
-#   카테고리 키 = dataset/images·videos 파일 접두사.
+#   카테고리 키 = images·videos 파일 접두사(통합 DATA, config.IMAGE_DIR·VIDEO_DIR).
 #   smoke 는 프롬프트상 '화재·연기' 묶음이라 정답유형 화재로 둠('smoke_fire*' 도 'smoke' 접두사로 매칭).
 CATEGORIES = {
     "fire":            {"count": 6, "label": "위험", "danger": "화재", "query": "warehouse fire cctv footage",      "desc": "화재"},
